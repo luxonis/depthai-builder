@@ -1,12 +1,13 @@
 import subprocess
-
+import pathlib
 from setuptools import setup
 from setuptools.command.build_ext import build_ext
 
 
 class checkout_submodule(build_ext):
     def run(self):
-        print("test")
+        build_temp = pathlib.Path(self.build_temp)
+        build_temp.mkdir(parents=True, exist_ok=True)
         subprocess.check_call(['git', 'submodule', 'update', '--init'], cwd=self.build_temp)
 
 setup(
