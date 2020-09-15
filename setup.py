@@ -18,5 +18,7 @@ setup(
     license='MIT',
     packages=['depthai_builder'],
     zip_safe=False,
-    ext_modules=[checkout_submodule('depthai_builder')],
+    cmdclass={
+        'build_ext': checkout_submodule
+    },
 )
