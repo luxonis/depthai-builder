@@ -1,5 +1,3 @@
-import json
-
 from depthai_builder import PipelineBuilder, ProcessorType
 
 builder = PipelineBuilder(pipelineVersion="2", pipelineName="testpipeline")\
@@ -13,4 +11,4 @@ producer = builder.add_node("MyProducer", properties={"processorPlacement": Proc
 builder.connect(xin, "out", xout, "in")
 builder.connect(producer, "out", xout, "in")
 
-print(json.dumps(builder.to_dict(), indent=4))
+print(builder.to_dict())
