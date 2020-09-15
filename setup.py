@@ -6,6 +6,7 @@ from setuptools.command.build_ext import build_ext
 
 class checkout_submodule(build_ext):
     def run(self):
+        print("test")
         subprocess.check_call(['git', 'submodule', 'update', '--init'], cwd=self.build_temp)
 
 setup(
