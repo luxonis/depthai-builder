@@ -1,3 +1,9 @@
+# Depreciated - is now developed as a part of [Pipeline Builder Gen2](https://github.com/luxonis/depthai/issues/136)
+
+This repository contained an early representation of pipeline builder concepts. It is building a dynamic Python classes and modules based on JSON Schema files, wchich was our initial idea about new API. 
+
+Since the architecture has changed and we dropped JSON Schema dependency, this repository was archived and serves as an example for anyone interested.
+
 # DepthAI Pipeline Builder Python API
 
 This tool is a Python API for DepthAI Pipeline Builder v2
